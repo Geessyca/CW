@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".MainWindow">
+
+    <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bgw"
+            android:scaleType="centerCrop" />
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <LinearLayout
+                android:id="@+id/main_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp"
+        >
+
+                <TextView
+                        android:id="@+id/logout"
+                        android:layout_width="32dp"
+                        android:layout_height="53dp"
+                        android:text="Sair"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteY="3dp" tools:layout_editor_absoluteX="363dp"/>
+                <LinearLayout
+                        android:id="@+id/lin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="80dp"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@color/white"
+
+                        tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="80dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Olá "
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                    />
+                    <TextView
+                            android:id="@+id/uname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" !"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                    />
+                </LinearLayout>
+                <EditText
+                        android:id="@+id/comments"
+                        android:layout_width="320dp"
+                        android:layout_height="100dp"
+                        android:padding="5dp"
+                        android:fillColor="#FFFFFF"
+                        android:hint="Compartilhe"
+                />
+                <Button
+                        android:id="@+id/btnPublib"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="Publicar"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ed3"
+                />
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="16dp"
+                            android:clipToPadding="false"
+                            android:scrollbars="vertical"
+                            android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".CadastroForm">
+
+    <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bgw"
+            android:scaleType="centerCrop" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+
+            <EditText
+                    android:id="@+id/ed1"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="185dp"
+                    android:fillColor="#FFFFFF"
+                    android:hint="Profissão"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+            <EditText
+                    android:id="@+id/ed2"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    android:fillColor="#FFFFFF"
+                    android:hint="Username"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed1"
+            />
+            <EditText
+                    android:id="@+id/ed3"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    android:fillColor="#FFFFFF"
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:longClickable="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed2"
+            />
+            <Button
+                    android:id="@+id/btnrgs"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="Cadastrar"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/background"
+                    android:layout_marginTop="35dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed3"
+            />
+            <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+            <LinearLayout
+                    android:id="@+id/lin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnrgs"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+            >
+                <TextView
+                        android:id="@+id/txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Já possui conta? "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                />
+                <TextView
+                        android:id="@+id/login_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Faça Login"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
